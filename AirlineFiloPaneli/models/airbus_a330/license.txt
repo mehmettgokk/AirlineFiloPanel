@@ -1,0 +1,11 @@
+Model Information:
+* title:	airbus a330
+* source:	https://sketchfab.com/3d-models/airbus-a330-9f40c75533df4faf9de1854fb36add80
+* author:	1883 (https://sketchfab.com/1883)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "airbus a330" (https://sketchfab.com/3d-models/airbus-a330-9f40c75533df4faf9de1854fb36add80) by 1883 (https://sketchfab.com/1883) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

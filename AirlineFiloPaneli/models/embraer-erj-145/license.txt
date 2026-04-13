@@ -1,0 +1,11 @@
+Model Information:
+* title:	Embraer-erj-145
+* source:	https://sketchfab.com/3d-models/embraer-erj-145-993a9c9ec519406ba3957046b8ed07f0
+* author:	Shawn 684 M (https://sketchfab.com/adim09)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Embraer-erj-145" (https://sketchfab.com/3d-models/embraer-erj-145-993a9c9ec519406ba3957046b8ed07f0) by Shawn 684 M (https://sketchfab.com/adim09) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

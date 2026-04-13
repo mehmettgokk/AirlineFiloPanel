@@ -1,0 +1,11 @@
+Model Information:
+* title:	Airbus A321
+* source:	https://sketchfab.com/3d-models/airbus-a321-561c4002ed6c44b697195cdffb60e25c
+* author:	OUTPISTON (https://sketchfab.com/outpiston)
+
+Model License:
+* license type:	CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
+* requirements:	Author must be credited. No commercial use. Modified versions must have the same license.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Airbus A321" (https://sketchfab.com/3d-models/airbus-a321-561c4002ed6c44b697195cdffb60e25c) by OUTPISTON (https://sketchfab.com/outpiston) licensed under CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)

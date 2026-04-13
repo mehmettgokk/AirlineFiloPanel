@@ -1,0 +1,11 @@
+Model Information:
+* title:	boeing 777 FREE INTERIOR
+* source:	https://sketchfab.com/3d-models/boeing-777-free-interior-861878c67a6a4a3faa46107065eddbfc
+* author:	Henry Chi (https://sketchfab.com/henrychi)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "boeing 777 FREE INTERIOR" (https://sketchfab.com/3d-models/boeing-777-free-interior-861878c67a6a4a3faa46107065eddbfc) by Henry Chi (https://sketchfab.com/henrychi) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

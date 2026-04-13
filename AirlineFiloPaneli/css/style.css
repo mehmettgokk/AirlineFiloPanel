@@ -1,0 +1,461 @@
+
+:root {
+    --primary-color: #3498db;
+    --background-color: #1f2937;
+    --card-background: #2c3e50;
+    --text-color: #ecf0f1;
+    --header-text-color: #ffffff;
+    --border-color: #4a6a8a;
+    --shadow-color: rgba(0, 0, 0, 0.4);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+
+.main-header {
+    background-color: var(--card-background);
+    padding: 1.5rem 0;
+    text-align: center;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.main-header h1 {
+    color: var(--header-text-color);
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.main-footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+    color: #bdc3c7;
+    font-size: 0.9em;
+}
+
+/* Kart Tasarımı */
+.card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    border: 1px solid var(--border-color);
+}
+
+.card h2 {
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+
+.filter-controls {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.form-group {
+    flex-grow: 1;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+select {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #3b5068;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 0.8rem 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.stat-card {
+    text-align: center;
+}
+
+.stat-card h3 {
+    font-weight: 400;
+    color: #bdc3c7;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+
+.card-section {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    border: 1px solid var(--border-color);
+}
+
+.card-section h2 {
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.aircraft-card {
+    background-color: #314457;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.aircraft-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px var(--shadow-color);
+}
+
+.card-header {
+    background-color: #3b5068;
+    padding: 1rem;
+}
+
+.card-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.card-header p {
+    font-size: 0.9rem;
+    color: #bdc3c7;
+}
+
+.card-body {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.card-stat h4 {
+    font-size: 0.8rem;
+    color: #bdc3c7;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.card-stat p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+}
+
+.modal-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: var(--card-background);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.visible .modal-content {
+    transform: scale(1);
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.modal-body-content .detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-body-content .detail-item:last-child {
+    border-bottom: none;
+}
+
+.modal-body-content .detail-label {
+    font-weight: 500;
+    color: #bdc3c7;
+}
+
+.modal-body-content .detail-value {
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+
+.charts-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+
+.charts-grid .span-2 {
+    grid-column: span 2;
+}
+
+.chart-card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    border: 1px solid var(--border-color);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.chart-title {
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    flex-shrink: 0; 
+}
+
+.chart-container {
+    position: relative;
+    width: 100%;
+
+    flex-grow: 1; 
+    min-height: 350px; 
+}
+
+
+@media (max-width: 1200px) {
+    .charts-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .charts-grid {
+
+        grid-template-columns: 1fr;
+    }
+    
+
+    .charts-grid .span-2 {
+        grid-column: span 1;
+    }
+}
+
+
+.modal-body-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.sketchfab-embed-wrapper {
+    position: relative;
+    height: 350px; 
+    background-color: #1f2937; 
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    overflow: hidden; 
+}
+
+.sketchfab-embed-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+.loading-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #bdc3c7;
+    font-size: 1.2rem;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.section-header h2 {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.view-switcher {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.view-btn {
+    background: none;
+    border: 1px solid var(--border-color);
+    color: #bdc3c7;
+    padding: 0.4rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.view-btn:hover {
+    background-color: #3b5068;
+    color: white;
+}
+
+.view-btn.active {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #3b5068;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    font-weight: 500;
+}
+
+tbody tr {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #314457;
+}
+
+tbody tr:hover {
+    background-color: #4a6a8a;
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airline Fleet Panel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <h1>AİRLİNE FLEET PANEL</h1>
+    </header>
+
+    <main class="container">
+        
+
+        <section class="card filter-section">
+            <h2>Filtrele ve Görüntüle</h2>
+            <div class="filter-controls">
+                <div class="form-group">
+                    <label for="airline-select">Havayolu Şirketi Seçin:</label>
+                    <select id="airline-select">
+                        <option value="Tümü">Tüm Havayolları</option>
+
+                    </select>
+                </div>
+                <button id="search-button">Filoyu Görüntüle</button>
+            </div>
+        </section>
+
+
+        <section class="stats-grid">
+            <div class="card stat-card">
+                <h3>Toplam Uçak Sayısı</h3>
+                <p id="total-aircraft-count">0</p>
+            </div>
+            <div class="card stat-card">
+                <h3>Havayolu Sayısı</h3>
+                <p id="total-airline-count">0</p>
+            </div>
+            <div class="card stat-card">
+                <h3>En Yaygın Model</h3>
+                <p id="most-common-model">-</p>
+            </div>
+            <div class="card stat-card">
+                <h3>Ortalama Koltuk Sayısı</h3>
+                <p id="average-seat-count">0</p>
+            </div>
+        </section>
+
+        <section class="charts-grid">
+            
+
+            <div class="card chart-card">
+                <h3 class="chart-title">Filo Yapısı (Toplam Filo)</h3>
+                <div class="chart-container">
+                    <canvas id="manufacturer-chart"></canvas>
+                </div>
+            </div>
+
+            <div class="card chart-card">
+                <h3 class="chart-title">Koltuk Sayısı</h3>
+                <div class="chart-container">
+                    <canvas id="seat-capacity-chart"></canvas>
+                </div>
+            </div>
+            
+            <div class="card chart-card">
+                <h3 class="chart-title">Uçak Modellerine Göre Ekip Dağılımı</h3>
+                <div class="chart-container">
+                    <canvas id="crew-distribution-chart"></canvas>
+                </div>
+            </div>
+
+
+            <div class="card chart-card span-2">
+                <h3 class="chart-title">Ekip Sayısı & Koltuk İlişkisi</h3>
+                <div class="chart-container">
+                    <canvas id="range-seat-chart"></canvas>
+                </div>
+            </div>
+            
+            <div class="card chart-card">
+                <h3 class="chart-title">Filo Dağılımı (Modele Göre)</h3>
+                <div class="chart-container">
+                    <canvas id="fleet-composition-chart"></canvas>
+                </div>
+            </div>
+
+            <div class="card chart-card">
+                <h3 class="chart-title">Yıllık Ortalama Doluluk Oranı</h3>
+                <div class="chart-container">
+                    <canvas id="occupancy-chart"></canvas>
+                </div>
+            </div> 
+            
+            <div class="card chart-card">
+                <h3 class="chart-title">Sınıf Bazlı Doluluk (Economy vs Business)</h3>
+                <div class="chart-container">
+                    <canvas id="class-occupancy-chart"></canvas>
+                </div>
+            </div>
+
+
+            <div class="card chart-card">
+                <h3 class="chart-title">Uçak Modeli Doluluk Performansı</h3>
+                <div class="chart-container">
+                    <canvas id="efficiency-polar-chart"></canvas>
+                </div>
+            </div>   
+            
+
+            <div class="card chart-card">
+                <h3 class="chart-title">Bölgesel Doluluk Oranları</h3>
+                <div class="chart-container">
+                    <canvas id="regional-occupancy-chart"></canvas>
+                </div>
+            </div>
+
+
+            <div class="card chart-card">
+                <h3 class="chart-title">Sefer Doluluk Segmentasyonu</h3>
+                <div class="chart-container">
+                    <canvas id="load-factor-doughnut"></canvas>
+                </div>
+            </div>
+
+
+            <div class="card chart-card">
+                <h3 class="chart-title">Filo Yaş Analizi</h3>
+                <div class="chart-container">
+                    <canvas id="fleet-age-chart"></canvas>
+                </div>
+            </div>
+
+
+            <div class="card chart-card">
+                <h3 class="chart-title">Anlık Filo Durumu</h3>
+                <div class="chart-container">
+                    <canvas id="fleet-status-chart"></canvas>
+                </div>
+            </div>
+
+            <div class="card chart-card span-2">
+                <h3 class="chart-title">Performans Analizi: Ağırlık vs Menzil</h3>
+                <div class="chart-container">
+                    <canvas id="performance-scatter-chart"></canvas>
+                </div>
+            </div>
+
+
+            <div class="card chart-card">
+                <h3 class="chart-title">Filo Teknik Profili</h3>
+                <div class="chart-container">
+                    <canvas id="tech-radar-chart"></canvas>
+                </div>
+            </div>
+            
+
+        </section>
+
+
+
+        <section class="card-section">
+            <div class="section-header">
+                <h2 id="section-title">Filo Detayları</h2>
+                
+                <div class="view-switcher">
+                    <button id="view-grid-btn" class="view-btn active" title="Izgara Görünümü">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    </button>
+                    <button id="view-list-btn" class="view-btn" title="Liste Görünümü">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                    </button>
+                </div>
+            </div>
+
+            <div id="data-display-container">
+
+            </div>
+        </section>
+
+    </main>
+
+    <div id="details-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="close-modal-button" class="close-button">&times;</button>
+            <h2 id="modal-title">Uçak Detayları</h2>
+            <div id="modal-body" class="modal-body-content">
+                
+                <div id="sketchfab-container" class="sketchfab-embed-wrapper">
+
+                </div>
+
+
+                <div id="details-list">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+        <script nomodule src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer-legacy.js"></script>
+        <script src="js/main.js"></script>
+        <p>&copy; 2025 FLEET PROJECT</p>
+    </footer>
+
+</body>
+</html>
